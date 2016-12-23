@@ -1,0 +1,57 @@
+const int H1=9;
+
+const int H2=10;
+
+const int H3=11;
+
+const int H4=12;
+
+//Pins for the transistors, starting at the top left, going around clockwise
+
+void setup()
+
+{
+
+pinMode(H1, OUTPUT);
+
+pinMode(H2, OUTPUT);
+
+pinMode(H3, OUTPUT);
+
+pinMode(H4, OUTPUT);
+
+//Set pins as outputs for transistors
+
+}
+
+void loop()
+
+{
+
+digitalWrite(H1, HIGH);
+
+digitalWrite(H3, HIGH);
+
+delay(1000);
+
+digitalWrite(H1, LOW);
+
+digitalWrite(H3, LOW);
+
+delay(500);
+
+digitalWrite(H2, HIGH);
+
+digitalWrite(H4, HIGH);
+
+delay(1000);
+
+digitalWrite(H2, LOW);
+
+digitalWrite(H4, LOW);
+
+delay(500);
+
+//Turns one way for a second, then switches directions
+
+}

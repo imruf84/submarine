@@ -1,0 +1,55 @@
+/*
+pin assignments:
+9   - R1
+10  - R2
+11  - R3
+12  - R4
+*/
+
+int R1 = 9;
+
+int R2 = 10;
+
+int R3 = 11;
+
+int R4 = 12;
+
+void setup(){
+pinMode(R1, OUTPUT);
+pinMode(R2, OUTPUT);
+pinMode(R3, OUTPUT);
+pinMode(R4, OUTPUT);
+off();
+delay(1000);
+}
+
+void loop(){
+forward();
+delay(3000);
+reverse();
+delay(3000);
+off();
+delay(3000);
+}
+
+
+void forward() {
+digitalWrite(R1, LOW);
+digitalWrite(R2, LOW);
+digitalWrite(R3, HIGH);
+digitalWrite(R4, HIGH);
+}
+
+void reverse(){
+digitalWrite(R1, HIGH);
+digitalWrite(R2, HIGH);
+digitalWrite(R3, LOW);
+digitalWrite(R4, LOW);
+}
+
+void off() {
+digitalWrite(R1, LOW);
+digitalWrite(R2, HIGH);
+digitalWrite(R3, LOW);
+digitalWrite(R4, HIGH);
+}
